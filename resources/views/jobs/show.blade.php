@@ -3,7 +3,9 @@
         Job
     </x-slot:heading>
 
-    <h1 class="font-bold">{{ $job['title'] }}</h1>
+    <h1 class="font-bold">{{ $job->title }}</h1>
 
-    <p> This job pays {{ $job['salary'] }} dolar</p>
+    <p class="mb-4"> This job pays {{ $job->salary }} dolar</p>
+
+    <x-button href="/jobs/{{ $job->id }}/edit">Edit</x-button>
 </x-layout>
