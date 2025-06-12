@@ -11,7 +11,9 @@ class Job extends Model
 
     protected $table = 'job_listing';
 
-    protected $fillable = ['title', 'salary'];
+//    protected $fillable = ['title', 'salary'];
+
+    protected $guarded = [];
 
     public function employer()
     {
