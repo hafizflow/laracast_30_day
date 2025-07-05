@@ -88,6 +88,15 @@
                             href="/register"
                             :active="request()->is('register')">Register</x-nav-link>
                     @endguest
+
+                    @auth()
+                        <form
+                            action="/logout"
+                            method="POST">
+                            @csrf
+                            <x-form-button>Log Out</x-form-button>
+                        </form>
+                    @endauth
                 </div>
             </div>
         </div>
