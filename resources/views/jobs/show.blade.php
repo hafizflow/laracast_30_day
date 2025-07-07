@@ -7,5 +7,7 @@
 
     <p class="mb-4"> This job pays {{ $job->salary }} dolar</p>
 
-    <x-button href="/jobs/{{ $job->id }}/edit">Edit Job</x-button>
+    @can('edit', $job)
+        <x-button href="/jobs/{{ $job->id }}/edit">Edit Job</x-button>
+    @endcan
 </x-layout>
